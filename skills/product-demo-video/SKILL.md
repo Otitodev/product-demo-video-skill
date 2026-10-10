@@ -21,6 +21,6 @@ Make a finished, reviewable video that shows the product doing what the copy cla
 
 ## Build and deliver
 
-- Reuse an existing video project and the editor or renderer already chosen by the user or project. For a new code-driven project with no chosen renderer, default to Remotion; choose another tool when the work calls for it. Keep scene content separate from design tokens and reusable motion components.
+- Reuse an existing video project and the editor or renderer already chosen by the user or project. For a new code-driven project with no chosen renderer, default to [Remotion](https://www.remotion.dev/docs/); choose another tool when the work calls for it. Keep scene content separate from design tokens and reusable motion components.
 - Animate from timeline frame values so seeking and rendering are deterministic. Use a shared scene model for text, visual asset, color/style, duration, and entrance timing. Respect safe margins and avoid unsupported claims or fake UI states.
 - Render the requested format, inspect a contact sheet and representative frames at full size, and verify duration, dimensions, and audio. Fix visible timing, legibility, and asset problems before delivery. Include the final file and editable source location.
