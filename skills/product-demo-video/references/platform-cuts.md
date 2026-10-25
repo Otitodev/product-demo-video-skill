@@ -12,6 +12,16 @@ Use when the same video must run on more than one platform. Plan the cuts before
 - Keep claims and disclaimers identical across cuts. Stricter platforms (ads on Facebook or LinkedIn) may need softer outcome claims.
 - Each cut with narration needs its own voiceover. Reuse the same voice for brand consistency.
 
+## Building the cuts
+
+- Define one layout per frame shape (for example 9:16 and 4:5): width, height, padding, headline size and top, phone scale and top. Every scene reads from it, so adding a shape means adding one entry.
+- Scale the phone and its overlays (finger, ripples) together from a single wrapper so taps still line up.
+- Keep headlines and the call to action out of the top and bottom UI zones that platforms overlay on Stories and Reels. Enlarge the device until it nearly fills the space between them, so the frame does not look empty.
+- Let each scene play one voiceover clip and last as long as the clip plus a little air. Cuts then share clips: reuse existing lines wherever they fit and generate only the lines a cut genuinely needs.
+- Read the clip lengths before promising a cut length. A single long closing line can make a "30 second" cut run 45 seconds. Trim that line first.
+- The same 9:16 file usually serves several placements (WhatsApp Status, Facebook Reels and Stories, Instagram Stories). Render once, then re-encode for any file-size cap with a bitrate limit and check loudness again.
+- Different platforms reward different openings. Lead the Facebook feed cut with something people want to share (for example "3 signs a job is a scam"), and the Status cut with a quick personal hook and a share ask.
+
 ## Typical limits (reported by third-party guides, early 2026)
 
 Confirm in the app's upload screen before relying on any figure. Platforms change these often, and guides conflict.

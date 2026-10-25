@@ -18,6 +18,32 @@ Keep entries specific and short. Remove or correct an entry when it turns out to
 
 ## Entries
 
+### 2026-10 · Nigerian AI-jobs waitlist promo (vertical cuts)
+- **What happened:** Short cuts for WhatsApp Status and the Facebook feed needed a few new spoken lines, and an extra line list would have caused the music to be regenerated.
+- **Why:** the music length was computed from every line in the manifest, so adding lines raised the target length.
+- **Rule:** keep one cache of clips keyed by a hash of voice, model, and text, reuse existing clips wherever a line fits, and compute the music length from the main story only, so extra cuts never regenerate it.
+- **Folded into:** `audio-and-voiceover.md`, `platform-cuts.md`.
+
+### 2026-10 · Nigerian AI-jobs waitlist promo (vertical cuts)
+- **What happened:** The user said "no ElevenLabs credits in the video". It could mean no on-screen credit or no spending of voice credits, and the first reading guessed wrong, so a render was rejected.
+- **Rule:** when a phrase could mean "do not spend" or "do not show", confirm in one short question before spending paid credits or rendering.
+- **Folded into:** log only.
+
+### 2026-10 · Nigerian AI-jobs waitlist promo (vertical cuts)
+- **What happened:** A render was interrupted and the orphaned Remotion process kept the port, so every later command failed with "port not available".
+- **Rule:** after an interrupted render, check what holds the port (on Windows, `Get-NetTCPConnection -LocalPort <port>` with the process command line), stop only the process that you started from this project, then rerun.
+- **Folded into:** `capture-and-verify.md`.
+
+### 2026-10 · Nigerian AI-jobs waitlist promo (vertical cuts)
+- **What happened:** A single layout could not serve 9:16 and 4:5. A phone sized for 9:16 left a large empty area, and text sat where platform buttons overlay.
+- **Rule:** define a layout per frame shape (width, height, padding, headline size and top, phone scale and top) and drive every scene from it. Scale the phone and its overlays together from one wrapper, keep text out of the top and bottom UI zones, and enlarge the device until it nearly fills the space between them.
+- **Folded into:** `platform-cuts.md`.
+
+### 2026-10 · Nigerian AI-jobs waitlist promo (vertical cuts)
+- **What happened:** The WhatsApp cut came out at 45 s because the closing line was 13 s long, and a contact sheet built with `tile` from fewer images than cells came out wrong.
+- **Rule:** read the clip lengths before promising a cut length, and trim the longest line first. Build small review sheets with `hstack` or an exact-count `tile`. For a file-size cap, re-encode with a bitrate cap (a 45 s clip at about 2.2 Mbps was 4 MB against a 16 MB cap) and re-check loudness.
+- **Folded into:** `platform-cuts.md`, `capture-and-verify.md`.
+
 ### 2026-10 · Nigerian AI-jobs waitlist promo
 - **What happened:** On a scrolling phone screen the job cards slid over the header, status bar, and notch.
 - **Why:** the list moved with a transform inside an unclipped box, and the notch was just a pill drawn on top.

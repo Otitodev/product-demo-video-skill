@@ -25,6 +25,9 @@ Keep illustrated outcomes honest. If a scene shows a result the product cannot p
 
 ## Tooling traps
 
+- After an interrupted render, an orphaned Remotion process can keep the port. On Windows, find it with `Get-NetTCPConnection -LocalPort <port> -State Listen` plus the process command line, stop only the process you started from this project, then rerun.
+- `ffmpeg` `tile` needs exactly the number of images the grid expects, or the sheet comes out wrong. For a handful of stills, scale each and join them with `hstack`.
+
 - A dev server may already own Remotion's default port (3000). Pass an explicit port (`--port=3300`) to every `remotion` command, or it will fail with "not a Remotion project".
 - Long heredocs with regular expressions and backslashes get mangled in some shells. Write code with the file-writing tool, and write patch scripts to a file instead of passing them inline.
 - Load fonts before rendering (`delayRender` / `continueRender` with `FontFace`), or the first frames use fallback fonts.

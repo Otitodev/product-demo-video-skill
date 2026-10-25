@@ -9,6 +9,8 @@ Use when the video needs a narrator or a soundtrack. Silent video is a valid cut
 - Write for the ear. Spell out numbers and web addresses the way they should be said ("five thousand naira", "A I Hired dot N G"). Avoid symbols and abbreviations the voice may read wrongly.
 - Generate one audio clip per beat. Pass the neighbouring lines (`previous_text`, `next_text` in ElevenLabs) so tone and pacing stay consistent across separate clips.
 - Cache by hash of voice, model, and text, so changing one line regenerates only that clip.
+- When extra cuts need their own lines, keep them in a second list that the same script reads, and reuse existing clips wherever a line fits. Compute the music length from the main story only, so extra lines never trigger a new music generation.
+- Before spending paid credits, confirm what the user means by any ambiguous instruction about them. "No credits in the video" can mean no on-screen attribution or no spending.
 
 ## Let the audio drive the timing
 
